@@ -13,3 +13,9 @@ PHPIniDir "C:/php"
 
 # Prioriser les fichiers .php
 DirectoryIndex index.php index.html
+
+
+<Directory "C:/xampp/phpMyAdmin">
+    AllowOverride AuthConfig
+    Require all granted
+</Directory>
