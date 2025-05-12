@@ -19,3 +19,53 @@ DirectoryIndex index.php index.html
     AllowOverride AuthConfig
     Require all granted
 </Directory>
+
+
+-- Créer la base
+CREATE DATABASE entreprise CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci;
+USE entreprise;
+
+-- Table des métiers
+CREATE TABLE metiers (
+    id_metier INT AUTO_INCREMENT PRIMARY KEY,
+    nom_metier VARCHAR(100) NOT NULL
+);
+
+-- Table des employés
+CREATE TABLE employes (
+    id_employe INT AUTO_INCREMENT PRIMARY KEY,
+    nom VARCHAR(50) NOT NULL,
+    prenom VARCHAR(50) NOT NULL,
+    id_metier INT,
+    FOREIGN KEY (id_metier) REFERENCES metiers(id_metier)
+);
+
+-- Table des emplois du temps
+CREATE TABLE emplois_du_temps (
+    id_edt INT AUTO_INCREMENT PRIMARY KEY,
+    id_employe INT,
+    jour_semaine ENUM('Lundi','Mardi','Mercredi','Jeudi','Vendredi') NOT NULL,
+    heure_debut TIME NOT NULL,
+    heure_fin TIME NOT NULL,
+    FOREIGN KEY (id_employe) REFERENCES employes(id_employe)
+);
+
+
+-- Métiers
+INSERT INTO metiers (nom_metier) VALUES
+('Développeur Web'),
+('Designer UX'),
+('Chef de projet');
+
+-- Employés
+INSERT INTO employes (nom, prenom, id_metier) VALUES
+('Durand', 'Alice', 1),
+('Martin', 'Jean', 2),
+('Lemoine', 'Claire', 3);
+
+-- Emplois du temps
+INSERT INTO emplois_du_temps (id_employe, jour_semaine, heure_debut, heure_fin) VALUES
+(1, 'Lundi', '09:00:00', '12:00:00'),
+(1, 'Mardi', '13:00:00', '17:00:00'),
+(2, 'Mercredi', '10:00:00', '12:00:00'),
+(3, 'Vendredi', '08:30:00', '11:30:00');
