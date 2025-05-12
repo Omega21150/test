@@ -2,3 +2,14 @@ https://www.apachelounge.com/download/#google_vignette
 https://dev.mysql.com/downloads/mysql/
 https://www.phpmyadmin.net/downloads/
 https://www.php.net/downloads.php
+
+
+# Charger PHP dans Apache
+LoadModule php_module "C:/php/php8apache2_4.dll"
+AddHandler application/x-httpd-php .php
+
+# Définir le répertoire de PHP
+PHPIniDir "C:/php"
+
+# Prioriser les fichiers .php
+DirectoryIndex index.php index.html
