@@ -1,1 +1,3 @@
 https://www.apachelounge.com/download/#google_vignette
+https://dev.mysql.com/downloads/mysql/
+https://www.phpmyadmin.net/downloads/
