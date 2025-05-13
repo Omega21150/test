@@ -3,6 +3,7 @@ https://dev.mysql.com/downloads/mysql/
 https://www.phpmyadmin.net/downloads/
 https://www.php.net/downloads.php
 https://windows.php.net/downloads/releases/
+ https://learn.microsoft.com/fr-fr/cpp/windows/latest-supported-vc-redist
 
 [Tue May 13 13:56:50.822975 2025] [core:warn] [pid 1664:tid 336] AH00098: pid file C:/apache/logs/httpd.pid overwritten -- Unclean shutdown of previous Apache run?
 PHP Warning:  'C:\\Windows\\SYSTEM32\\VCRUNTIME140.dll' 14.28 is not compatible with this PHP build linked with 14.43 in Unknown on line 0
