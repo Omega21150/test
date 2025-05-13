@@ -9,6 +9,13 @@ https://windows.php.net/downloads/releases/
 PHP Warning:  'C:\\Windows\\SYSTEM32\\VCRUNTIME140.dll' 14.28 is not compatible with this PHP build linked with 14.43 in Unknown on line 0
 
 
+$cfg['Servers'][$i]['auth_type'] = 'config'; // temporairement pour test
+$cfg['Servers'][$i]['host'] = '127.0.0.1';
+$cfg['Servers'][$i]['user'] = 'root';
+$cfg['Servers'][$i]['password'] = 'TonMotDePasseIci';
+$cfg['Servers'][$i]['connect_type'] = 'tcp'; // important sur Windows
+
+
 [mysqld]
 basedir=C:/mysql
 datadir=C:/mysql/data
