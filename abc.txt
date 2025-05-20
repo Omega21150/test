@@ -87,6 +87,13 @@ INSERT INTO employes (nom, prenom, id_metier) VALUES
 
 -- Emplois du temps
 INSERT INTO emplois_du_temps (id_employe, jour_semaine, heure_debut, heure_fin) VALUES
+
+
+
+
+
+
+ca marche
 (1, 'Lundi', '09:00:00', '12:00:00'),
 (1, 'Mardi', '13:00:00', '17:00:00'),
 (2, 'Mercredi', '10:00:00', '12:00:00'),
